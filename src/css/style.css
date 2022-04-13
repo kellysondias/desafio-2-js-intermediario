@@ -1,0 +1,84 @@
+.cartao {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 60px 0 5px 15px;
+    background-color: var(--cor-do-cartao);
+    max-width: 655px;
+    width: 100%;
+    border-radius: 21px;
+    box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+.cartao .imagem img {
+    max-width: 278px;
+    position: relative;
+    right: 91px;
+    bottom: 32px;
+}
+
+.cartao .faq {
+    position: relative;
+    right: 48px;
+}
+
+.cartao .faq h2 {
+    font-size: 2.5rem;
+    font-weight: (--fonte-peso-grande);
+    margin-bottom: 14px;
+}
+
+.cartao .faq .caixa-de-texto h3 {
+    font-size: 1.7rem;
+    font-weight: var(--fonte-peso-medio);
+    padding-right: 41px;
+    cursor: pointer;
+}
+
+.cartao .faq .caixa-de-texto h3::after {
+    content: '';
+    background: url(../img/seta.png) no-repeat center center;
+    display: inline-block;
+    width: 15px;
+    height: 8.86px;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    margin: 5px 1.5% 0 auto;
+}
+
+.cartao .faq .caixa-de-texto h3:hover::after {
+    content: '';
+    background: url(../img/seta-colorida.png) no-repeat center center;
+    display: inline-block;
+    width: 15px;
+    height: 8.86px;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    margin: 5px 1.5% 0 auto;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 15px;
+}
+
+.cartao .faq .caixa-de-texto.texto-ativo h3::after {
+    background: url(../img/seta-colorida.png) no-repeat center center;
+    background-size: cover;
+}
+
+.cartao .faq .caixa-de-texto:nth-child(n+3) h3 {margin-top: 15px;}
+
+.cartao .faq .caixa-de-texto:nth-child(-1n+3) {
+    border-bottom: 1px solid var(--cor-da-linha);
+    padding-bottom: 15px;
+}
+
+.cartao .faq .caixa-de-texto p {
+    display: none;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.cartao .faq .caixa-de-texto.texto-ativo p {display: block;}
+
+.cartao .faq .caixa-de-texto:last-child .texto-ativo {padding-bottom: 8px;}
